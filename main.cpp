@@ -92,11 +92,11 @@ int main()
 		l1++;
 	}
 	cout<<endl;
-   	std::cout << "vvedi zameny" << std::endl;
-       	std::string str2 = "Can you can a can as a canner can can a can";
-       	std::string str3;
-       	std::getline(std::cin, str3);
-       	std::string strc = "can";
+   	cout << "vvedi zameny" << std::endl;
+       	string str2 = "Can you can a can as a canner can can a can";
+       	string str3;
+       	getline(std::cin, str3);
+       	string strc = "can";
        		while (str2.find(strc) != std::string::npos) 
 		{
          		 auto pos = str2.find(strc);
@@ -111,6 +111,6 @@ int main()
            str2.erase(pos, strc.size());
            str2.insert(pos, str3);
        }
-       std::cout << str2<<endl;
+       cout << str2<<endl;
        return 0;
    }
