@@ -34,13 +34,14 @@ int main()
 	
 	cout<<endl;
 	
-	
 	for (int i=0;i<n;i++)
 	{
 		if (top[i]%2==0){
 			top[i]=pow(top[i],2);
 		}
 		cout<<top[i]<<" ";	}
+	
+	
 	cout<<endl;
 	int k1, k2;
 	int a=0;
@@ -78,7 +79,17 @@ int main()
 	}
 	cout<<(sum*1.0/vec[vec.size()-1])<<endl;
 	
-	
+	long u=0;
+	u=vec.size();
+	for (long i=0;i<vec.size();i++){
+		if (vec[i]<0) {
+			vec.erase(vec.begin()+i);
+			i=u;
+		}
+	}
+	for (int i=0; i<vec.size();i++) {
+		cout<<vec[i]<<" ";
+	}
 	
 	//    Зачада 4.
 	string str1, q;
