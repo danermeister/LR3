@@ -34,11 +34,13 @@ int main()
 	
 	cout<<endl;
 	
+	
 	for (int i=0;i<n;i++)
 	{
-		if (top[i]%2==0)
-		{cout<<pow(top[i],2)<<" ";}
-	}
+		if (top[i]%2==0){
+			top[i]=pow(top[i],2);
+		}
+		cout<<top[i]<<" ";	}
 	cout<<endl;
 	int k1, k2;
 	int a=0;
