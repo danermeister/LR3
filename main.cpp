@@ -111,10 +111,10 @@ int main()
     
     
     cout<<endl;
-       cout << "vvedi zameny" << std::endl;
+       cout << "vvedi zameny" << endl;
            string str2 = "Can you can a can as a canner can can a can";
            string str3;
-           getline(std::cin, str3);
+           getline(cin, str3);
            string strc = "can";
                while (str2.find(strc) != std::string::npos)
         {
