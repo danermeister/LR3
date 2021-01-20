@@ -115,7 +115,7 @@ int main()
            string str2 = "Can you can a can as a canner can can a can";
            string str3;
            getline(cin, str3);
-           string strc = "can";
+           string strc = "can ";
                while (str2.find(strc) != std::string::npos)
         {
                   auto pos = str2.find(strc);
