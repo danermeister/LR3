@@ -112,24 +112,29 @@ int main()
     
     cout<<endl;
        cout << "vvedi zameny" << endl;
-           string str2 = "Can you can a can as a canner can can a can";
+         string str2 = "Can you can a can as a canner can can a can";
            string str3;
            getline(cin, str3);
            string strc = "can ";
-               while (str2.find(strc) != std::string::npos)
-        {
+               while (str2.find(strc) != string::npos)
+               {
                   auto pos = str2.find(strc);
-                    str2.erase(pos, strc.size());
+                    str2.erase(pos, (strc.size()-1));
                    str2.insert(pos, str3);
                }
+    
+            str2.erase(str2.size()-3,str2.size());
+            str2.insert(str2.size(),str3);
+        
        strc = "Can";
        if ((str3[0] >= 97) && (str3[0] <= 122)) str3[0] -= 32;
-       while (str2.find(strc) != std::string::npos)
+       while (str2.find(strc) != string::npos)
        {
            auto pos = str2.find(strc);
            str2.erase(pos, strc.size());
            str2.insert(pos, str3);
        }
+    
        cout << str2<<endl;
        return 0;
    }
