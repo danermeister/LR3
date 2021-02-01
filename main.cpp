@@ -20,7 +20,7 @@ int main()
     int n;
     cout << "Vvidite dlinu massiva" << "\n";
     cin >> n;
-    int *top = new int[n];
+    int* top = new int[n];
     for (int i = 0; i < n; i++)
     {
         cin >> top[i];
@@ -109,11 +109,10 @@ int main()
     q = str1.substr(l1, l2);
     cout << q << endl;
 
-
-    cout << endl;
     cout << "vvedi zameny" << endl;
     string str2 = "Can you can a can as a canner can can a can";
     string str3;
+    cin.ignore(10, '\n');
     getline(cin, str3);
     string strc = "can ";
     while (str2.find(strc) != string::npos)
@@ -138,4 +137,3 @@ int main()
     cout << str2 << endl;
     return 0;
 }
-
