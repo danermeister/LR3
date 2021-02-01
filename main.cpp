@@ -85,7 +85,7 @@ int main()
     long u = 0;
     u = vec.size();
     for (long i = 0; i < vec.size(); i++) {
-        if (vec[i] < 0) {
+        if (vec[i] > 0) {
             vec.erase(vec.begin() + i);
             i = u;
         }
@@ -94,6 +94,7 @@ int main()
         cout << vec[i] << " ";
     }
 
+    cout << endl;
     //    Зачада 4.
     string str1, q;
     cout << "Vvedite stroku:" << endl;
