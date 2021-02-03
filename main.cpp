@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include <string>
 #include <vector>
 
@@ -7,10 +9,9 @@ int main()
 {
     //    Задача 1.
     int qwer[10];
-    for (int i = 0; i < 10; i++)
-    {
+    srand(time(nullptr));
+    for (int i = 0; i < 10; ++i) {
         qwer[i] = rand() % 21 - 10;
-
         cout << qwer[i] << " ";
     }
     cout << endl;
@@ -18,7 +19,7 @@ int main()
     cout << qwer[0] - qwer[3] - qwer[5] << endl;
     //    Задача 2.
     int n;
-    cout << "Vvidite dlinu massiva" << "\n";
+    cout << "Vvidite dlinu massiva: ";
     cin >> n;
     int* top = new int[n];
     for (int i = 0; i < n; i++)
@@ -58,7 +59,7 @@ int main()
     //    Задача 3.
     int m = 0;
     int b;
-    cout << "Vvidite dlinu massiva" << "\n";
+    cout << "Vvidite dlinu massiva: " << "\n";
     cin >> m;
     vector<int> vec;
     for (int i = 0; i < m; i++)
@@ -66,35 +67,43 @@ int main()
         cin >> b;
         vec.insert(vec.end(), b);
     }
-    for (int i = 0; i < m; i++)
+
+    for (auto element : vec)
     {
-        cout << vec[i] << " ";
+        cout << element << " ";
     }
     cout << endl;
     vec.push_back(14);
-    for (int i = 0; i < vec.size(); i++) {
-        cout << vec[i] << " ";
+
+    for (auto element : vec) {
+        cout << element << " ";
     }
     cout << endl;
-    int sum = 0;
-    for (int i = 0; i < vec.size(); i++) {
-        sum += (vec[i]);
-    }
-    cout << (sum * 1.0 / vec[vec.size() - 1]) << endl;
 
+    //3.3
+    double p = 0;
+    cout << "Delim: " << endl;
+    for (int i = 0; i < vec.size() - 1; i++) {
+        p = vec[i];
+        cout << p / vec.back() << " ";
+    }
+    cout << endl;
+
+    //3.4
     long u = 0;
     u = vec.size();
-    for (long i = 0; i < vec.size(); i++) {
+
+    for (long i = 0; i < u; i++) {
         if (vec[i] > 0) {
             vec.erase(vec.begin() + i);
             i = u;
         }
     }
-    for (int i = 0; i < vec.size(); i++) {
-        cout << vec[i] << " ";
+    for (auto element : vec) {
+        cout << element << " ";
     }
-
     cout << endl;
+    
     //    Зачада 4.
     string str1, q;
     cout << "Vvedite stroku:" << endl;
