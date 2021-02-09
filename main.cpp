@@ -116,8 +116,7 @@ int main()
     int l1 = 0, l2 = 0;
     cout << "Vvedite l1 i l2" << endl;
     cin >> l1 >> l2;
-    q = str1.substr(l1, l2);
-    cout << q << endl;
+    cout<<str1.substr(l1, l2)<<endl;
 
     cout << "vvedi zameny" << endl;
     string str2 = "Can you can a can as a canner can can a can";
